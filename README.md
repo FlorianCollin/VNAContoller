@@ -31,5 +31,28 @@ To incorporate this module into a Python project:
 1. Copy the `vna_controller.py` file to your computer.
 2. Install the required Python libraries mentioned above and TRVNA.
 3. Insert `vna_controller.py` into the current directory of your Python project.
-4. Launch TRVNA.
+4. Launch TRVNA. (System -> Misc Setup -> Network Setup -> TCP SOCKET ON)
 5. Execute your Python project.
+
+## GNU Radio
+
+To integrate VNAController with GNU Radio:
+
+1. Install the required Python libraries within GNU Radio by opening the Conda Prompt and navigating to the `radioconda` directory. Then install the libraries using the command `pip install lib_name`.
+2. Launch GNU Radio and add a Python block to your flowgraph.
+3. Edit the block, then copy the code from `vna_controller.py` above the script in the block.
+4. Get creative with your designs and applications!
+
+## Basic Usage Examples
+
+Here are some basic examples demonstrating the usage of the `VNAController`:
+
+```python
+# Create an instance of VNAController
+vna_controller = VNAController()
+
+# Set the default format to Log Mag of S11
+vna_controller.set_format()
+
+# Perform an acquisition for S11
+S11_data = vna_controller.acquisition()
