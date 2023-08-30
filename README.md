@@ -54,7 +54,7 @@ vna_controller = VNAController()
 # Set the default format to Log Mag of S11
 vna_controller.set_format()
 
-config = RFConfig()
+config = RFConfig(central_frequency=8e6, frequency_span=1e6, num_points=1000, averaging_factor=0, if_band=1000, smoothing = 0)
 
 vna_controller.set_RFConfig(config)
 
