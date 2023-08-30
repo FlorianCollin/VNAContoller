@@ -54,5 +54,9 @@ vna_controller = VNAController()
 # Set the default format to Log Mag of S11
 vna_controller.set_format()
 
+config = RFConfig()
+
+vna_controller.set_RFConfig(config)
+
 # Perform an acquisition for S11
 S11_data = vna_controller.acquisition()
