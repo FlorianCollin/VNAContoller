@@ -18,8 +18,6 @@ La classe VNAController gère la communication avec le VNA en utilisant la bibli
 
 import pyvisa
 import numpy as np
-# import pour les exemples de code à la fin
-import matplotlib.pyplot as plt
 
 ############################################# CLASSES DE CONFIGURATIONS #########################################################
 
